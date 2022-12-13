@@ -138,15 +138,15 @@ Author URL: http://w3layouts.com
                     </ul>
                 </div>
                 <div class="col-md-6 contact-right mt-md-0 mt-5 ps-lg-0">
-                    <form action="https://sendmail.w3layouts.com/submitForm" method="post" class="signin-form">
+                    <form id="submit-form" action="" class="signin-form">
                         <div class="input-grids">
-                            <input type="text" name="w3lName" id="w3lName" placeholder="Your Name*"
+                            <input type="text" name="Name" id="Name" placeholder="Your Name*"
                                 class="contact-input" required="" />
-                            <input type="email" name="w3lSender" id="w3lSender" placeholder="Your Email*"
+                            <input type="email" name="Sender" id="Sender" placeholder="Your Email*"
                                 class="contact-input" required="" />
-                            <input type="text" name="w3lSubect" id="w3lSubect" placeholder="Subject*"
+                            <input type="text" name="Subject" id="Subject" placeholder="Subject*"
                                 class="contact-input" required="" />
-                            <input type="text" name="w3lWebsite" id="w3lWebsite" placeholder="Website URL*"
+                            <input type="text" name="Website" id="Website" placeholder="Website URL*"
                                 class="contact-input" required="" />
                         </div>
                         <div class="form-input">
@@ -294,6 +294,26 @@ Author URL: http://w3layouts.com
     <script src="assets/js/bootstrap.min.js"></script>
     <!-- //bootstrap -->
     <!-- //Js scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $("#submit-form").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbwtsPkHwh75vpicOh7qRCiYeRXtK-_BtP7O-_UzrS2leic7T5CDBzwk0gzanqnhGbsg3w/exec",
+                data:$("#submit-form").serialize(),
+                method:"post",
+                success:function (response){
+                    alert("Form submitted successfully")
+                    window.location.reload()
+                    //window.location.href="https://google.com"
+                },
+                error:function (err){
+                    alert("Something Error")
+    
+                }
+            })
+        })
+    </script>
 </body>
 
 </html>
