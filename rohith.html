@@ -39,11 +39,12 @@
             display: flex;
             align-items: center;
             color: #374151; /* Darker text for section titles */
+            font-size: 2rem; /* Adjusted section title font size */
         }
         .section-title i {
             color: #4f46e5; /* Accent color for icons */
             margin-right: 0.75rem; /* More space for icon */
-            font-size: 1.5rem; /* Larger icon size */
+            font-size: 1.3rem; /* Adjusted larger icon size */
         }
         .detail-item {
             display: flex;
@@ -53,7 +54,7 @@
         .detail-icon {
             color: #6b7280; /* Gray for icons */
             margin-right: 0.75rem; /* More space for icon */
-            font-size: 1.2rem; /* Slightly larger icon size */
+            font-size: 1.1rem; /* Adjusted slightly larger icon size */
         }
         ul {
             list-style-type: disc;
@@ -63,6 +64,7 @@
         li {
             margin-bottom: 0.6rem; /* Slightly more space between list items */
             transition: transform 0.2s ease-in-out; /* Smooth transition for hover */
+            font-size: 0.95rem; /* Adjusted list item font size */
         }
         li:hover {
             transform: translateX(5px); /* Subtle slide effect on hover */
@@ -93,29 +95,32 @@
                 text-align: left; /* Align contact details to left */
             }
             h1 {
-                font-size: 3.5rem; /* Adjust font size for name on smaller screens */
+                font-size: 2.5rem; /* Adjusted font size for name on smaller screens */
             }
-            .text-xl {
-                font-size: 1.125rem; /* Adjust location font size */
+            .text-xl-mobile { /* New class for mobile-specific text-xl adjustment */
+                font-size: 1rem; /* Adjusted location font size for mobile */
             }
-            .text-base {
-                font-size: 0.95rem; /* Adjust contact detail font size */
+            .text-base-mobile { /* New class for mobile-specific text-base adjustment */
+                font-size: 0.85rem; /* Adjusted contact detail font size for mobile */
             }
             .section-title {
-                font-size: 2rem; /* Adjust section title font size for smaller screens */
+                font-size: 1.75rem; /* Adjusted section title font size for smaller screens */
                 margin-bottom: 1.5rem; /* Reduce space after section title */
             }
             .section-title i {
-                font-size: 1.2rem; /* Adjust icon size in section titles */
+                font-size: 1.1rem; /* Adjusted icon size in section titles */
             }
-            .text-lg {
-                font-size: 1rem; /* Adjust paragraph and list item font size */
+            .text-lg-mobile { /* New class for mobile-specific text-lg adjustment */
+                font-size: 0.9rem; /* Adjusted paragraph and list item font size for mobile */
             }
-            .text-2xl {
-                font-size: 1.5rem; /* Adjust sub-heading font size */
+            .text-2xl-mobile { /* New class for mobile-specific text-2xl adjustment */
+                font-size: 1.25rem; /* Adjusted sub-heading font size for mobile */
             }
             ul {
-                margin-left: 1.5rem; /* Adjust list indentation */
+                margin-left: 1.25rem; /* Adjusted list indentation for mobile */
+            }
+            li {
+                font-size: 0.9rem; /* Adjusted list item font size for mobile */
             }
         }
     </style>
@@ -127,13 +132,13 @@
         <header class="pb-8 mb-8 border-b-2 border-gray-300">
             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center header-info">
                 <div>
-                    <h1 class="text-5xl font-extrabold text-gray-900 mb-2 rounded-md">ROHITH KT</h1>
-                    <p class="text-xl text-gray-600 mb-3 rounded-md">
+                    <h1 class="text-4xl font-extrabold text-gray-900 mb-2 rounded-md">ROHITH KT</h1>
+                    <p class="text-lg text-gray-600 mb-3 rounded-md sm:text-xl-mobile">
                         <i class="fas fa-map-marker-alt detail-icon"></i>
                         <span class="font-medium text-highlight">Perinthalmanna, Malappuram, Kerala</span>
                     </p>
                 </div>
-                <div class="text-base text-gray-700 sm:text-right mt-4 sm:mt-0 header-contact">
+                <div class="text-sm text-gray-700 sm:text-right mt-4 sm:mt-0 header-contact sm:text-base-mobile">
                     <p class="detail-item rounded-md">
                         <i class="fas fa-phone-alt detail-icon"></i>
                         <span>8137992114</span>
@@ -148,11 +153,11 @@
 
         <!-- Professional Summary -->
         <section class="mb-8">
-            <h2 class="text-3xl font-bold section-title rounded-md">
+            <h2 class="font-bold section-title rounded-md">
                 <i class="fas fa-user-tie"></i>Professional Summary
             </h2>
             <div class="mb-4">
-                <p class="text-gray-700 leading-relaxed text-lg">
+                <p class="text-gray-700 leading-relaxed text-base sm:text-lg-mobile">
                     Motivated Bachelor of Business Administration student with a strong foundation in communication and essential technical skills. Eager to apply academic knowledge and proficiency in MS Office, computer usage, and organizational punctuality to contribute effectively in an entry-level professional environment. Committed to continuous learning and achieving organizational goals.
                 </p>
             </div>
@@ -160,35 +165,35 @@
 
         <!-- Education Section -->
         <section class="mb-8">
-            <h2 class="text-3xl font-bold section-title rounded-md">
+            <h2 class="font-bold section-title rounded-md">
                 <i class="fas fa-graduation-cap"></i>Education
             </h2>
             <div class="mb-5">
-                <h3 class="text-2xl font-semibold text-gray-800 rounded-md">Bachelor of Business Administration (BBA)</h3>
-                <p class="text-gray-600 text-lg rounded-md">Calicut University — <span class="font-medium text-highlight">2023–2026</span></p>
+                <h3 class="text-xl font-semibold text-gray-800 rounded-md sm:text-2xl-mobile">Bachelor of Business Administration (BBA)</h3>
+                <p class="text-gray-600 text-base rounded-md sm:text-lg-mobile">Calicut University — <span class="font-medium text-highlight">2023–2026</span></p>
             </div>
             <div>
-                <h3 class="text-2xl font-semibold text-gray-800 rounded-md">Higher Secondary Education – Biology Science</h3>
-                <p class="text-gray-600 text-lg rounded-md">GMHSS Perinthalmanna — <span class="font-medium text-highlight">2020–2022</span></p>
+                <h3 class="text-xl font-semibold text-gray-800 rounded-md sm:text-2xl-mobile">Higher Secondary Education – Biology Science</h3>
+                <p class="text-gray-600 text-base rounded-md sm:text-lg-mobile">GMHSS Perinthalmanna — <span class="font-medium text-highlight">2020–2022</span></p>
             </div>
         </section>
 
         <!-- Skills Section -->
         <section class="mb-8">
-            <h2 class="text-3xl font-bold section-title rounded-md">
+            <h2 class="font-bold section-title rounded-md">
                 <i class="fas fa-tools"></i>Skills
             </h2>
             <div class="mb-5">
-                <h3 class="text-2xl font-semibold text-gray-800 mb-3 rounded-md">Communication:</h3>
-                <ul class="list-disc pl-8 text-gray-700 text-lg">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3 rounded-md sm:text-2xl-mobile">Communication:</h3>
+                <ul class="list-disc pl-8 text-gray-700">
                     <li class="rounded-md">Fluent in spoken and written English and Malayalam</li>
                     <li class="rounded-md">Strong verbal communication—comfortable discussing ideas, collaborating, and presenting</li>
                     <li class="rounded-md">Skilled at writing professional emails, reports, and documentation</li>
                 </ul>
             </div>
             <div>
-                <h3 class="text-2xl font-semibold text-gray-800 mb-3 rounded-md">Technical & Professional Skills:</h3>
-                <ul class="list-disc pl-8 text-gray-700 text-lg">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3 rounded-md sm:text-2xl-mobile">Technical & Professional Skills:</h3>
+                <ul class="list-disc pl-8 text-gray-700">
                     <li class="rounded-md">Proficient in Excel sheet management, MS Office Suite (Word, Excel, PowerPoint)</li>
                     <li class="rounded-md">Strong computer usage skills</li>
                     <li class="rounded-md">Punctuality</li>
