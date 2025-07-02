@@ -21,7 +21,7 @@
         }
         .cv-container {
             max-width: 850px; /* Slightly wider container */
-            width: 100%;
+            width: 100%; /* Ensures it takes full width on smaller screens */
             background-color: #ffffff;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
             border-radius: 1.25rem; /* Slightly more rounded corners */
@@ -75,23 +75,47 @@
             font-weight: 500;
         }
 
-        /* Responsive adjustments */
+        /* Responsive adjustments for smaller screens */
         @media (max-width: 640px) {
+            body {
+                padding: 1.5rem 0.75rem; /* Reduced overall padding on small screens */
+            }
             .cv-container {
-                padding: 2rem 1.5rem;
+                padding: 2rem 1.5rem; /* Adjusted internal padding for smaller screens */
+                border-radius: 1rem; /* Slightly less rounded on small screens */
             }
             .header-info {
-                flex-direction: column;
-                align-items: flex-start;
+                flex-direction: column; /* Stack items vertically */
+                align-items: flex-start; /* Align to the start */
             }
             .header-contact {
-                margin-top: 1.5rem;
+                margin-top: 1.5rem; /* Add space between name/location and contact details */
+                text-align: left; /* Align contact details to left */
+            }
+            h1 {
+                font-size: 3.5rem; /* Adjust font size for name on smaller screens */
+            }
+            .text-xl {
+                font-size: 1.125rem; /* Adjust location font size */
+            }
+            .text-base {
+                font-size: 0.95rem; /* Adjust contact detail font size */
             }
             .section-title {
-                font-size: 1.75rem; /* Adjust font size for smaller screens */
+                font-size: 2rem; /* Adjust section title font size for smaller screens */
+                margin-bottom: 1.5rem; /* Reduce space after section title */
             }
             .section-title i {
-                font-size: 1.2rem;
+                font-size: 1.2rem; /* Adjust icon size in section titles */
+            }
+            .text-lg {
+                font-size: 1rem; /* Adjust paragraph and list item font size */
+            }
+            .text-2xl {
+                font-size: 1.5rem; /* Adjust sub-heading font size */
+            }
+            ul {
+                margin-left: 1.5rem; /* Adjust list indentation */
             }
         }
     </style>
@@ -101,7 +125,7 @@
     <div class="cv-container">
         <!-- Header Section -->
         <header class="pb-8 mb-8 border-b-2 border-gray-300">
-            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center header-info">
                 <div>
                     <h1 class="text-5xl font-extrabold text-gray-900 mb-2 rounded-md">ROHITH KT</h1>
                     <p class="text-xl text-gray-600 mb-3 rounded-md">
@@ -109,7 +133,7 @@
                         <span class="font-medium text-highlight">Perinthalmanna, Malappuram, Kerala</span>
                     </p>
                 </div>
-                <div class="text-base text-gray-700 sm:text-right mt-4 sm:mt-0">
+                <div class="text-base text-gray-700 sm:text-right mt-4 sm:mt-0 header-contact">
                     <p class="detail-item rounded-md">
                         <i class="fas fa-phone-alt detail-icon"></i>
                         <span>8137992114</span>
