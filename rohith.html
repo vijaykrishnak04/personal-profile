@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROHITH KT - CV</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Subtle gradient background for a softer look */
+            background: linear-gradient(to bottom right, #f8fafc, #e2e8f0);
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 2.5rem 1.5rem; /* Increased padding for better spacing */
+        }
+        .cv-container {
+            max-width: 850px; /* Slightly wider container */
+            width: 100%;
+            background-color: #ffffff;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
+            border-radius: 1.25rem; /* Slightly more rounded corners */
+            overflow: hidden;
+            padding: 3rem; /* Increased internal padding */
+            border: 1px solid #e5e7eb; /* Subtle border */
+        }
+        h1, h2, h3 {
+            color: #1f2937; /* Darker gray for headings */
+        }
+        .section-title {
+            border-bottom: 2px solid #cbd5e1; /* Slightly darker border for sections */
+            padding-bottom: 0.75rem; /* More padding below title */
+            margin-bottom: 2rem; /* More space after section title */
+            display: flex;
+            align-items: center;
+            color: #374151; /* Darker text for section titles */
+        }
+        .section-title i {
+            color: #4f46e5; /* Accent color for icons */
+            margin-right: 0.75rem; /* More space for icon */
+            font-size: 1.5rem; /* Larger icon size */
+        }
+        .detail-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.75rem; /* Increased spacing between details */
+        }
+        .detail-icon {
+            color: #6b7280; /* Gray for icons */
+            margin-right: 0.75rem; /* More space for icon */
+            font-size: 1.2rem; /* Slightly larger icon size */
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 2rem; /* Increased indentation for lists */
+            color: #4b5563; /* Medium gray for list items */
+        }
+        li {
+            margin-bottom: 0.6rem; /* Slightly more space between list items */
+            transition: transform 0.2s ease-in-out; /* Smooth transition for hover */
+        }
+        li:hover {
+            transform: translateX(5px); /* Subtle slide effect on hover */
+            color: #1f2937; /* Darker text on hover */
+        }
+        .text-highlight {
+            background-color: #e0e7ff; /* Light blue background for highlighted text */
+            padding: 0.1rem 0.4rem;
+            border-radius: 0.3rem;
+            font-weight: 500;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 640px) {
+            .cv-container {
+                padding: 2rem 1.5rem;
+            }
+            .header-info {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .header-contact {
+                margin-top: 1.5rem;
+            }
+            .section-title {
+                font-size: 1.75rem; /* Adjust font size for smaller screens */
+            }
+            .section-title i {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="antialiased">
+    <div class="cv-container">
+        <!-- Header Section -->
+        <header class="pb-8 mb-8 border-b-2 border-gray-300">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+                <div>
+                    <h1 class="text-5xl font-extrabold text-gray-900 mb-2 rounded-md">ROHITH KT</h1>
+                    <p class="text-xl text-gray-600 mb-3 rounded-md">
+                        <i class="fas fa-map-marker-alt detail-icon"></i>
+                        <span class="font-medium text-highlight">Perinthalmanna, Malappuram, Kerala</span>
+                    </p>
+                </div>
+                <div class="text-base text-gray-700 sm:text-right mt-4 sm:mt-0">
+                    <p class="detail-item rounded-md">
+                        <i class="fas fa-phone-alt detail-icon"></i>
+                        <span>8137992114</span>
+                    </p>
+                    <p class="detail-item rounded-md">
+                        <i class="fas fa-calendar-alt detail-icon"></i>
+                        <span>DOB: 2003-11-20</span>
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Professional Summary -->
+        <section class="mb-8">
+            <h2 class="text-3xl font-bold section-title rounded-md">
+                <i class="fas fa-user-tie"></i>Professional Summary
+            </h2>
+            <div class="mb-4">
+                <p class="text-gray-700 leading-relaxed text-lg">
+                    Motivated Bachelor of Business Administration student with a strong foundation in communication and essential technical skills. Eager to apply academic knowledge and proficiency in MS Office, computer usage, and organizational punctuality to contribute effectively in an entry-level professional environment. Committed to continuous learning and achieving organizational goals.
+                </p>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="mb-8">
+            <h2 class="text-3xl font-bold section-title rounded-md">
+                <i class="fas fa-graduation-cap"></i>Education
+            </h2>
+            <div class="mb-5">
+                <h3 class="text-2xl font-semibold text-gray-800 rounded-md">Bachelor of Business Administration (BBA)</h3>
+                <p class="text-gray-600 text-lg rounded-md">Calicut University — <span class="font-medium text-highlight">2023–2026</span></p>
+            </div>
+            <div>
+                <h3 class="text-2xl font-semibold text-gray-800 rounded-md">Higher Secondary Education – Biology Science</h3>
+                <p class="text-gray-600 text-lg rounded-md">GMHSS Perinthalmanna — <span class="font-medium text-highlight">2020–2022</span></p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="mb-8">
+            <h2 class="text-3xl font-bold section-title rounded-md">
+                <i class="fas fa-tools"></i>Skills
+            </h2>
+            <div class="mb-5">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-3 rounded-md">Communication:</h3>
+                <ul class="list-disc pl-8 text-gray-700 text-lg">
+                    <li class="rounded-md">Fluent in spoken and written English and Malayalam</li>
+                    <li class="rounded-md">Strong verbal communication—comfortable discussing ideas, collaborating, and presenting</li>
+                    <li class="rounded-md">Skilled at writing professional emails, reports, and documentation</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-2xl font-semibold text-gray-800 mb-3 rounded-md">Technical & Professional Skills:</h3>
+                <ul class="list-disc pl-8 text-gray-700 text-lg">
+                    <li class="rounded-md">Proficient in Excel sheet management, MS Office Suite (Word, Excel, PowerPoint)</li>
+                    <li class="rounded-md">Strong computer usage skills</li>
+                    <li class="rounded-md">Punctuality</li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>
